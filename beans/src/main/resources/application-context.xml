@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="Human" class="lt.vtmc.Linkuviene.Bean"
+init-method="initialize" destroy-method="destroy">
+<property name="message" value="Hello, Bean" />
+<property name="name" value="Human" />
+<property name="age" value="0" />
+</bean>
+
+<bean id="Shape" class="lt.vtmc.Linkuviene.Bean">
+<property name="message" value="I am a Shape" />
+<property name="area" value="50" />
+<property name="color" value="red" />
+</bean>
+
+<bean id="Square" class="lt.vtmc.Linkuviene.Bean" parent="Shape">
+<property name="message" value="I am a Square" />
+</bean>
+
+<bean id="Rectangle" class="lt.vtmc.Linkuviene.Bean" parent="Shape">
+<property name="message" value="I am a Rectangle" />
+</bean>
+
+<bean id="Circle" class="lt.vtmc.Linkuviene.Bean" parent="Shape">
+<property name="message" value="I am a Circle" />
+</bean>
+
+
+
+<bean class="lt.vtmc.Linkuviene.BeanTest"/>
+
+</beans>
